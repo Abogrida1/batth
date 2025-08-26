@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كافيه النكهة - تجربة فريدة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-coffee"></i>
+                    <span>كافيه النكهة</span>
+                </div>
+                <div class="admin-link">
+                    <a href="admin.html" class="admin-btn" title="لوحة الإدارة">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#menu">القائمة</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>مرحباً بكم في كافيه النكهة</h1>
+            <p>استمتع بأفضل أنواع القهوة والمشروبات في أجواء مريحة وعصرية</p>
+            <button class="cta-button">اطلب الآن</button>
+        </div>
+        <div class="hero-image">
+            <div class="coffee-cup">
+                <i class="fas fa-coffee"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>قائمة المشروبات</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&h=200&fit=crop" alt="قهوة تركية">
+                        <div class="menu-overlay">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                    </div>
+                    <h3>قهوة تركية</h3>
+                    <p>قهوة تركية أصيلة مع الهيل والبهارات العربية</p>
+                    <span class="price">15 ريال</span>
+                    <button class="order-btn">اطلب الآن</button>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=200&fit=crop" alt="كابتشينو">
+                        <div class="menu-overlay">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                    </div>
+                    <h3>كابتشينو</h3>
+                    <p>كابتشينو إيطالي مع رغوة الحليب الفاخرة</p>
+                    <span class="price">18 ريال</span>
+                    <button class="order-btn">اطلب الآن</button>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&h=200&fit=crop" alt="لاتيه">
+                        <div class="menu-overlay">
+                            <i class="fas fa-glass-whiskey"></i>
+                        </div>
+                    </div>
+                    <h3>لاتيه</h3>
+                    <p>لاتيه ناعم مع حليب دافئ وطعم غني</p>
+                    <span class="price">20 ريال</span>
+                    <button class="order-btn">اطلب الآن</button>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop" alt="شاي أخضر">
+                        <div class="menu-overlay">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <h3>شاي أخضر</h3>
+                    <p>شاي أخضر طازج ومهدئ مع نكهة طبيعية</p>
+                    <span class="price">12 ريال</span>
+                    <button class="order-btn">اطلب الآن</button>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300&h=200&fit=crop" alt="ميلك شيك">
+                        <div class="menu-overlay">
+                            <i class="fas fa-ice-cream"></i>
+                        </div>
+                    </div>
+                    <h3>ميلك شيك</h3>
+                    <p>ميلك شيك بارد ومنعش مع نكهات متعددة</p>
+                    <span class="price">25 ريال</span>
+                    <button class="order-btn">اطلب الآن</button>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=200&fit=crop" alt="كيك الشوكولاتة">
+                        <div class="menu-overlay">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                    </div>
+                    <h3>كيك الشوكولاتة</h3>
+                    <p>كيك شوكولاتة طازج مع طبقة كريمة غنية</p>
+                    <span class="price">22 ريال</span>
+                    <button class="order-btn">اطلب الآن</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>من نحن</h2>
+                    <p>كافيه النكهة هو وجهتك المفضلة للحصول على أفضل أنواع القهوة والمشروبات الساخنة والباردة. نحن نقدم تجربة فريدة في أجواء مريحة وعصرية.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <span>جودة عالية</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>خدمة سريعة</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>أجواء مريحة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=400&fit=crop" alt="كافيه النكهة">
+                        <div class="about-overlay">
+                            <i class="fas fa-store"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>اتصل بنا</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>العنوان</h3>
+                            <p>شارع الملك فهد، الرياض</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>الهاتف</h3>
+                            <p>+966 50 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>البريد الإلكتروني</h3>
+                            <p>info@cafe-nakha.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>ساعات العمل</h3>
+                            <p>الأحد - الخميس: 7 ص - 11 م<br>الجمعة - السبت: 8 ص - 12 م</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="الاسم الكامل" required>
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                        <input type="tel" placeholder="رقم الهاتف">
+                        <textarea placeholder="رسالتك" rows="5" required></textarea>
+                        <button type="submit">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>كافيه النكهة</h3>
+                    <p>تجربة فريدة في عالم القهوة</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#menu">القائمة</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>ساعات العمل</h3>
+                    <p>الأحد - الخميس: 7 ص - 11 م</p>
+                    <p>الجمعة - السبت: 8 ص - 12 م</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 كافيه النكهة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-item active" data-section="home">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+        </div>
+        <div class="mobile-nav-item" data-section="menu">
+            <i class="fas fa-coffee"></i>
+            <span>القائمة</span>
+        </div>
+        <div class="mobile-nav-item" data-section="about">
+            <i class="fas fa-info-circle"></i>
+            <span>من نحن</span>
+        </div>
+        <div class="mobile-nav-item" data-section="contact">
+            <i class="fas fa-phone"></i>
+            <span>اتصل بنا</span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
