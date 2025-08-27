@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الإدارة - كافيه النكهة</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-nav">
+            <div class="admin-logo">
+                <i class="fas fa-coffee"></i>
+                <span>لوحة إدارة كافيه النكهة</span>
+            </div>
+            <div class="admin-actions">
+                <button class="preview-btn" onclick="previewChanges()">
+                    <i class="fas fa-eye"></i>
+                    معاينة التغييرات
+                </button>
+                <button class="save-btn" onclick="saveChanges()">
+                    <i class="fas fa-save"></i>
+                    حفظ التغييرات
+                </button>
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    العودة للموقع
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Content -->
+    <main class="admin-content">
+        <div class="admin-container">
+            <!-- Menu Items Management -->
+            <section class="menu-management">
+                <h2>إدارة صور المشروبات</h2>
+                <p class="admin-description">قم بتغيير صور المشروبات في الصفحة الرئيسية</p>
+                
+                <div class="menu-items-grid">
+                    <!-- Turkish Coffee -->
+                    <div class="menu-item-card">
+                        <div class="item-header">
+                            <h3>قهوة تركية</h3>
+                            <span class="item-id">#1</span>
+                        </div>
+                        <div class="image-preview">
+                            <img id="turkish-coffee-img" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&h=200&fit=crop" alt="قهوة تركية">
+                            <div class="image-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="item-controls">
+                            <input type="file" id="turkish-coffee-file" accept="image/*" class="file-input">
+                            <label for="turkish-coffee-file" class="upload-btn">
+                                <i class="fas fa-upload"></i>
+                                تغيير الصورة
+                            </label>
+                            <button class="reset-btn" onclick="resetImage('turkish-coffee')">
+                                <i class="fas fa-undo"></i>
+                                إعادة تعيين
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <p>السعر: 15 ريال</p>
+                            <p>الوصف: قهوة تركية أصيلة مع الهيل والبهارات العربية</p>
+                        </div>
+                    </div>
+
+                    <!-- Cappuccino -->
+                    <div class="menu-item-card">
+                        <div class="item-header">
+                            <h3>كابتشينو</h3>
+                            <span class="item-id">#2</span>
+                        </div>
+                        <div class="image-preview">
+                            <img id="cappuccino-img" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=200&fit=crop" alt="كابتشينو">
+                            <div class="image-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="item-controls">
+                            <input type="file" id="cappuccino-file" accept="image/*" class="file-input">
+                            <label for="cappuccino-file" class="upload-btn">
+                                <i class="fas fa-upload"></i>
+                                تغيير الصورة
+                            </label>
+                            <button class="reset-btn" onclick="resetImage('cappuccino')">
+                                <i class="fas fa-undo"></i>
+                                إعادة تعيين
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <p>السعر: 18 ريال</p>
+                            <p>الوصف: كابتشينو إيطالي مع رغوة الحليب الفاخرة</p>
+                        </div>
+                    </div>
+
+                    <!-- Latte -->
+                    <div class="menu-item-card">
+                        <div class="item-header">
+                            <h3>لاتيه</h3>
+                            <span class="item-id">#3</span>
+                        </div>
+                        <div class="image-preview">
+                            <img id="latte-img" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&h=200&fit=crop" alt="لاتيه">
+                            <div class="image-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="item-controls">
+                            <input type="file" id="latte-file" accept="image/*" class="file-input">
+                            <label for="latte-file" class="upload-btn">
+                                <i class="fas fa-upload"></i>
+                                تغيير الصورة
+                            </label>
+                            <button class="reset-btn" onclick="resetImage('latte')">
+                                <i class="fas fa-undo"></i>
+                                إعادة تعيين
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <p>السعر: 20 ريال</p>
+                            <p>الوصف: لاتيه ناعم مع حليب دافئ وطعم غني</p>
+                        </div>
+                    </div>
+
+                    <!-- Green Tea -->
+                    <div class="menu-item-card">
+                        <div class="item-header">
+                            <h3>شاي أخضر</h3>
+                            <span class="item-id">#4</span>
+                        </div>
+                        <div class="image-preview">
+                            <img id="green-tea-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop" alt="شاي أخضر">
+                            <div class="image-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="item-controls">
+                            <input type="file" id="green-tea-file" accept="image/*" class="file-input">
+                            <label for="green-tea-file" class="upload-btn">
+                                <i class="fas fa-upload"></i>
+                                تغيير الصورة
+                            </label>
+                            <button class="reset-btn" onclick="resetImage('green-tea')">
+                                <i class="fas fa-undo"></i>
+                                إعادة تعيين
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <p>السعر: 12 ريال</p>
+                            <p>الوصف: شاي أخضر طازج ومهدئ مع نكهة طبيعية</p>
+                        </div>
+                    </div>
+
+                    <!-- Milkshake -->
+                    <div class="menu-item-card">
+                        <div class="item-header">
+                            <h3>ميلك شيك</h3>
+                            <span class="item-id">#5</span>
+                        </div>
+                        <div class="image-preview">
+                            <img id="milkshake-img" src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300&h=200&fit=crop" alt="ميلك شيك">
+                            <div class="image-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="item-controls">
+                            <input type="file" id="milkshake-file" accept="image/*" class="file-input">
+                            <label for="milkshake-file" class="upload-btn">
+                                <i class="fas fa-upload"></i>
+                                تغيير الصورة
+                            </label>
+                            <button class="reset-btn" onclick="resetImage('milkshake')">
+                                <i class="fas fa-undo"></i>
+                                إعادة تعيين
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <p>السعر: 25 ريال</p>
+                            <p>الوصف: ميلك شيك بارد ومنعش مع نكهات متعددة</p>
+                        </div>
+                    </div>
+
+                    <!-- Chocolate Cake -->
+                    <div class="menu-item-card">
+                        <div class="item-header">
+                            <h3>كيك الشوكولاتة</h3>
+                            <span class="item-id">#6</span>
+                        </div>
+                        <div class="image-preview">
+                            <img id="chocolate-cake-img" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=200&fit=crop" alt="كيك الشوكولاتة">
+                            <div class="image-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="item-controls">
+                            <input type="file" id="chocolate-cake-file" accept="image/*" class="file-input">
+                            <label for="chocolate-cake-file" class="upload-btn">
+                                <i class="fas fa-upload"></i>
+                                تغيير الصورة
+                            </label>
+                            <button class="reset-btn" onclick="resetImage('chocolate-cake')">
+                                <i class="fas fa-undo"></i>
+                                إعادة تعيين
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <p>السعر: 22 ريال</p>
+                            <p>الوصف: كيك شوكولاتة طازج مع طبقة كريمة غنية</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section Image -->
+            <section class="about-management">
+                <h2>صورة قسم "من نحن"</h2>
+                <div class="about-image-card">
+                    <div class="image-preview large">
+                        <img id="about-img" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=400&fit=crop" alt="كافيه النكهة">
+                        <div class="image-overlay">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="item-controls">
+                        <input type="file" id="about-file" accept="image/*" class="file-input">
+                        <label for="about-file" class="upload-btn">
+                            <i class="fas fa-upload"></i>
+                            تغيير الصورة
+                        </label>
+                        <button class="reset-btn" onclick="resetImage('about')">
+                            <i class="fas fa-undo"></i>
+                            إعادة تعيين
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Notification System -->
+    <div id="notification-container"></div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
